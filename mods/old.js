@@ -694,7 +694,12 @@ input[type="button"]:active, input[type="button"]:active:hover {
 		margin-left: 0px;
 		margin-right: 0px;
 	}
-	#gameDiv { /*game canvas*/
+	#gameDiv,
+	#gameDiv.gameDiv-wide {
+		/*game canvas*/
+		margin-top: 35px;
+	}
+	.standalone #gameDiv {
 		margin-top: 0;
 	}
 	.stat {
@@ -719,11 +724,14 @@ input[type="button"]:active, input[type="button"]:active:hover {
 	}
 }
 @media screen and (max-width: 600px) {
-	#gameDiv { /*game canvas*/
-		margin-top: 0;
+	#gameDiv,
+	#gameDiv.gameDiv-wide {
 		border-left: none;
 		border-right: none;
 		border-top: none;
+	}
+	.standalone #gameDiv {
+		margin-top: 0;
 	}
 	.pagetitle {
 		display: none
@@ -1155,6 +1163,14 @@ img {
 }
 .infoGrid .infoLink {
 	margin-right: 2em;
+}
+
+#gameDiv.gameDiv-wide {
+  border: none !important;
+  margin-top: 55px;
+}
+.standalone #gameDiv.gameDiv-wide {
+  margin-top: 0!important
 }
 	
 `
